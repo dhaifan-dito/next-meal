@@ -1,11 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 
 export default function Home() {
-  const Button = dynamic(() => import('../components/Button'))
 
   return (
     <div className={styles.container}>
@@ -18,8 +15,6 @@ export default function Home() {
       <h1>Welcome!</h1>
       
       <div style={{display:'grid', gridTemplateColumns:'auto auto'}}>
-      <Button />
-      <Button />
         <Link href='/csr'><h2>CSR</h2></Link>
         <Link href='/ssr'><h2>SSR</h2></Link>
         <Link href='/ssg'><h2>SSG</h2></Link>
